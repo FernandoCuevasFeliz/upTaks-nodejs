@@ -7,7 +7,6 @@ const morgan = require('morgan');
 
 // importing routes
 const routes = require('./routes/index.routes');
-const { dirname } = require('path');
 
 const app = express();
 
@@ -22,7 +21,7 @@ app.use(helmet());
 app.use(morgan('dev'));
 
 // static files
-app.use(express.static(__dirname + '/../public'));
+app.use(express.static(path.resolve(__dirname, '../public')));
 
 // views
 app.set('view engine', 'pug');

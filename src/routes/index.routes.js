@@ -2,6 +2,7 @@ const { Router } = require('express');
 
 // importing routes
 const authRoutes = require('./auth.routes');
+const projectRoutes = require('./project.routes');
 
 const router = Router();
 
@@ -16,5 +17,6 @@ router.get('/profile', (req, res) => {
 });
 
 router.use('/', authRoutes);
+router.use('/', projectRoutes);
 
 module.exports = router;

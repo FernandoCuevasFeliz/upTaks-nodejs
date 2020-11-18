@@ -1,3 +1,4 @@
+import '../scss/styles.scss';
 // menu
 const $btnMenu = document.getElementById('icon-menu');
 const $menu = document.getElementById('main-menu');

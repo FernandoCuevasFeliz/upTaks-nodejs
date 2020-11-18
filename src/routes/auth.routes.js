@@ -1,29 +1,25 @@
 const { Router } = require('express');
 
+const authCtrl = require('../controllers/auth.controllers');
+
 const router = Router();
 
 router
   .route('/login')
   .get((req, res) => {
-    res.render('login', {
+    res.render('pages/auth/login', {
       namePage: 'Login',
     });
   })
-  .post((req, res) => {
-    console.log(req.body);
-    res.redirect('/profile');
-  });
+  .post(authCtrl.login);
 
 router
   .route('/register')
   .get((req, res) => {
-    res.render('register', {
+    res.render('pages/auth/register', {
       namePage: 'Register',
     });
   })
-  .post((req, res) => {
-    console.log(req.body);
-    res.redirect('/profile');
-  });
+  .post(authCtrl.register);
 
 module.exports = router;
