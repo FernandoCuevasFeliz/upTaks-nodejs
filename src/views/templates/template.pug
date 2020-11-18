@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html(lang="en")
+   head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      title UpTaks | #{namePage}
+      //- icons
+      link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css")
+
+      //- Font Roboto
+      link(rel="preconnect",href="https://fonts.gstatic.com")
+      link(href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet")
+
+      //- Normalize 
+      link(rel="stylesheet", href="./css/normalize.css")
+      
+      //- GUSTOM CSS 
+      link(rel="stylesheet", href="./css/styles.css")
+      
+   body
+      .page-container
+         include ../partials/header
+         block content
+
+      script(src="./js/script.js")

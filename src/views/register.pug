@@ -1,0 +1,27 @@
+extends ./templates/template
+
+block content
+   .auth-form-container#auth-container
+      form.auth-form#auth-form(method="POST",action="/register",data-form="register")
+         h2.form-title SignIn
+         .auth-accounts
+            a.auth-btn(href="#"): i.fab.fa-google
+            a.auth-btn(href="#"): i.fab.fa-facebook-square
+            a.auth-btn(href="#"): i.fab.fa-github
+         .form__control
+            input.control(type="text", name="firstname",id="firstname",placeholder="Fistname")
+         .form__control
+            input.control(type="text",name="lastname",id="lastname",placeholder="Lastname")
+         .form__control
+            input.control(type="text",name="username",id="username",placeholder="Username")
+         .form__control
+            input.control(type="email", name="email",id="email" ,placeholder="Email")
+         .form__control
+            input.control(type="password",name="password",id="password",placeholder="Password")
+         .form__control
+            input.control(type="password",name="confirm_pass",id="confirm_pass",placeholder="Confirm Password")
+         button.btn-form#btn-login(type="submit") Register
+         .form__footer
+            p.desc Do you already have an account? 
+               a.form__link(href="/login") Log in
+            
