@@ -1,0 +1,12 @@
+extends ../../templates/template
+
+block content
+   .auth-form-container#auth-container
+      p.auth__info You will receive a message in your email so you can change your password
+      form.auth-form#auth-form(method="POST",action="/reset-pass",data-form="send-mail")
+         h2.form-title #{namePage}
+         .form__control
+            input.control(type="text", name="username", id="username",placeholder="Username or Email")
+         .form__control
+         button.btn-form#btn-login(type="submit") Send Message
+         

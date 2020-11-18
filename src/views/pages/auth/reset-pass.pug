@@ -1,0 +1,15 @@
+extends ../../templates/template
+
+block content
+   .auth-form-container#auth-container
+
+      form.auth-form#auth-form(method="POST",action="/reset-pass",data-form="reset-pass")
+         h2.form-title #{namePage}
+         .form__control
+            input.control(type="password",name="old-password",id="old-password",placeholder="Old Password")
+         .form__control
+            input.control(type="password",name="password",id="password",placeholder="Password")
+         .form__control
+            input.control(type="password",name="confirm_pass",id="confirm_pass",placeholder="Confirm Password")
+        
+         button.btn-form#btn-login(type="submit") Change Password

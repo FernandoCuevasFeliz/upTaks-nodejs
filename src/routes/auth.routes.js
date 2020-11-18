@@ -22,4 +22,14 @@ router
   })
   .post(authCtrl.register);
 
+router.route('/reset-pass').get((req, res) => {
+  res.render('pages/auth/reset-pass', {
+    namePage: 'Reset Password',
+  });
+});
+router.route('/send-mail').get((req, res) => {
+  res.render('pages/auth/send-mail', {
+    namePage: 'Send Mail',
+  });
+});
 module.exports = router;
